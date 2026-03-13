@@ -28,6 +28,12 @@ This repository contains the source code for my personal portfolio, showcasing m
 - **Experience:** Detailed career timeline and educational background.
 - **Projects:** Selected works including automation frameworks and optimization projects.
 
+### 🤖 AI-Augmented Workflows
+
+A sub-focus on leveraging agentic AI to accelerate research, visualization, and specialized tooling.
+
+- **[Thought](https://arjitc12.github.io/Thought/):** An experimental exploration into cognitive patterns and history, visualized through custom 3D and 2D interfaces.
+
 ## 🔧 Getting Started
 
 To view the portfolio locally:
