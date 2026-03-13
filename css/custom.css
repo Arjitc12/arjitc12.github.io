@@ -611,3 +611,53 @@ ul, ol { list-style: none; }
   .hero-cta .btn { text-align: center; justify-content: center; }
   .footer-inner { flex-direction: column; gap: 1.2rem; text-align: center; }
 }
+
+/* ── AI Explorations ────────────────────────────────────────── */
+#ai-explorations {
+  background: var(--bg-white);
+  padding: 8rem 0;
+  border-top: 1px solid var(--border);
+}
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.4rem;
+  margin-top: 5rem;
+}
+.ai-card {
+  background: var(--bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 3.2rem;
+  transition: all 0.25s var(--ease);
+}
+.ai-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(184,115,51,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transform: translateY(-2px);
+}
+.ai-card-title {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1.4rem;
+}
+.ai-card-title i {
+  color: var(--accent);
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+.ai-card-desc {
+  font-size: 1.45rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 768px) {
+  #ai-explorations { padding: 8rem 0; }
+  .ai-grid { margin-top: 4rem; }
+}
