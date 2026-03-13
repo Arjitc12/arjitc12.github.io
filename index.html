@@ -402,49 +402,76 @@
   </section>
 
   <!-- ============================================================
-       AI EXPLORATIONS (High-Fidelity HUD)
+       AI EXPLORATIONS (Cyber-HUD Overhaul)
        ============================================================ -->
   <section id="ai-explorations">
     <div class="ai-scanlines"></div>
-    <div class="ai-bg-grid"></div>
-    <div class="ai-bg-glow"></div>
     <div class="ai-scanner"></div>
 
-    <!-- Random Data Readouts (Decorative) -->
-    <div class="ai-readout" style="top: 10%; left: 5%;">CORE_LATENCY: 0.42ms</div>
-    <div class="ai-readout" style="top: 15%; right: 8%;">AUTH_SYNC: 100%</div>
-    <div class="ai-readout" style="bottom: 12%; left: 7%;">OS_ARCH: ARM64_V9</div>
-    <div class="ai-readout" style="bottom: 18%; right: 5%;">EXP_ID: 0x2A4F</div>
+    <!-- Technical Readouts -->
+    <div class="ai-readout" style="top: 10%; left: 5%;">[LATENCY: 0.04ms]</div>
+    <div class="ai-readout" style="top: 12%; right: 5%;">[SYNC: ACTIVE]</div>
+    <div class="ai-readout" style="bottom: 10%; left: 5%;">[ARCH: ARM_Oryon]</div>
+    <div class="ai-readout" style="bottom: 12%; right: 5%;">[EXP_ID: 0x9F28]</div>
 
     <div class="container">
-      <span class="section-label">Agentic Workflows</span>
-      <h2 class="section-title">AI-Augmented Explorations</h2>
-      <p class="section-desc">Pushing the boundaries of research and visualization through specialized agentic AI tooling.</p>
+      <div style="text-align: center;">
+        <span class="section-label">// AI_LABS</span>
+        <h2 class="section-title">Augmented Workflows</h2>
+        <p class="section-desc">Technical experiments leveraging agentic AI to push the boundaries of research and visualisation.</p>
+      </div>
 
-      <div class="ai-grid">
-        <a href="https://arjitc12.github.io/Thought/" target="_blank" rel="noopener" class="ai-card">
-          <div class="ai-card-hud"></div>
-          
-          <div class="ai-status">
-            <span class="ai-status-dot"></span>
-            SYS_STATUS: OPTIMIZED
+      <div class="ai-console-wrapper">
+        <div class="ai-console">
+          <!-- Console Header -->
+          <div class="ai-console-header">
+            <div class="ai-console-title">EXPERIMENT_VIEWER v1.0.4</div>
+            <div class="ai-console-controls">
+              <div class="ai-console-dot"></div>
+              <div class="ai-console-dot"></div>
+              <div class="ai-console-dot active"></div>
+            </div>
           </div>
 
-          <div class="ai-card-title">
-            <i class="fa fa-cube"></i>
-            <span>Thought</span>
-          </div>
+          <!-- Console Body -->
+          <div class="ai-console-body">
+            <div class="ai-console-main">
+              <div class="ai-status-tag">STABLE</div>
+              
+              <div class="ai-card-title">
+                <i class="fa fa-cube"></i>
+                <span>Thought</span>
+              </div>
 
-          <code class="ai-meta-string">DATA_STREAM :: COGNITIVE_PATTERNS.RAW</code>
+              <p class="ai-card-desc">
+                An experimental exploration into cognitive patterns and historical systems. Visualized via a bespoke 3D/2D interface designed to reveal latent connections within high-dimensional datasets.
+              </p>
 
-          <p class="ai-card-desc">
-            An experimental exploration into cognitive patterns and historical systems. Visualized via a bespoke 3D/2D interface designed to reveal latent connections within multi-dimensional datasets.
-          </p>
-          
-          <div class="ai-card-tag">
-            RUN_EXPERIMENT &nbsp; &rarr;
+              <a href="https://arjitc12.github.io/Thought/" target="_blank" rel="noopener" class="ai-console-btn">
+                Launch Environment &rarr;
+              </a>
+            </div>
+
+            <div class="ai-console-side">
+              <div class="ai-tech-block">
+                <span class="ai-tech-label">PROCESSOR</span>
+                <span class="ai-tech-value">Neural_Engine</span>
+              </div>
+              <div class="ai-tech-block">
+                <span class="ai-tech-label">VISUAL_ENGINE</span>
+                <span class="ai-tech-value">ThreeJS_GL</span>
+              </div>
+              <div class="ai-tech-block">
+                <span class="ai-tech-label">DATA_SOURCE</span>
+                <span class="ai-tech-value">Historical_CSV</span>
+              </div>
+              <div class="ai-tech-block">
+                <span class="ai-tech-label">STATUS</span>
+                <span class="ai-tech-value" style="color: var(--accent);">OPTIMIZED</span>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
