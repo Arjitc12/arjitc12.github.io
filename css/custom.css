@@ -688,9 +688,10 @@ ul, ol { list-style: none; }
 }
 
 .ai-console:hover {
-  border-color: rgba(184,115,51,0.5);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 30px rgba(184,115,51,0.1);
-  transform: translateY(-5px) rotateX(1deg);
+  border-color: rgba(184,115,51,0.7); /* Brighter border on hover */
+  box-shadow: 0 40px 100px rgba(0,0,0,0.9), 0 0 40px rgba(184,115,51,0.2);
+  background: rgba(15, 15, 15, 0.9); /* Subtle background shift */
+  transform: translateY(-8px) rotateX(1deg);
 }
 
 /* Console Header */
@@ -739,12 +740,13 @@ ul, ol { list-style: none; }
   display: inline-block;
   font-family: var(--mono);
   font-size: 0.9rem;
-  color: #000;
-  background: var(--accent);
+  color: #FFFFFF; /* Fix: High contrast text */
+  background: rgba(184,115,51,0.8); /* Fix: Brighter background */
   padding: 0.4rem 1.2rem;
   margin-bottom: 3rem;
   font-weight: 700;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .ai-card-title {
@@ -757,12 +759,17 @@ ul, ol { list-style: none; }
   gap: 2rem;
 }
 
-.ai-card-title i { color: var(--accent); font-size: 2.8rem; opacity: 0.9; }
+.ai-card-title i { 
+  color: var(--accent); 
+  font-size: 2.8rem; 
+  opacity: 1; /* More visible */
+  filter: drop-shadow(0 0 8px rgba(184,115,51,0.4));
+}
 
 .ai-card-desc {
   font-size: 1.6rem;
   line-height: 1.8;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.7); /* Fix: Brighter description */
   margin-bottom: 4rem;
 }
 
