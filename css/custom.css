@@ -612,52 +612,151 @@ ul, ol { list-style: none; }
   .footer-inner { flex-direction: column; gap: 1.2rem; text-align: center; }
 }
 
-/* ── AI Explorations ────────────────────────────────────────── */
+/* ── AI Explorations (Futuristic Redesign) ───────────────────── */
 #ai-explorations {
-  background: var(--bg-white);
-  padding: 8rem 0;
-  border-top: 1px solid var(--border);
+  position: relative;
+  background: #080808;
+  padding: 12rem 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(184,115,51,0.15);
 }
+
+/* Cyber Background Elements */
+.ai-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(184,115,51,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,115,51,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
+  pointer-events: none;
+}
+
+.ai-bg-glow {
+  position: absolute;
+  top: -10%; left: -10%;
+  width: 40%; height: 40%;
+  background: radial-gradient(circle, rgba(184,115,51,0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+#ai-explorations .section-label { color: var(--accent); opacity: 0.6; }
+#ai-explorations .section-title { color: #FFFFFF; }
+#ai-explorations .section-desc { color: rgba(255,255,255,0.45); }
+
 .ai-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.4rem;
-  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
 }
+
 .ai-card {
-  background: var(--bg);
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  padding: 3.2rem;
-  transition: all 0.25s var(--ease);
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 4rem;
+  max-width: 500px;
+  transition: all 0.4s var(--ease);
+  text-align: center;
 }
+
+.ai-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(184,115,51,0.3) 0%, transparent 40%, rgba(184,115,51,0.1) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
 .ai-card:hover {
-  background: #FFFFFF;
-  border-color: rgba(184,115,51,0.3);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-  transform: translateY(-2px);
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(184,115,51,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(184,115,51,0.1);
 }
+
+.ai-card:hover::before { opacity: 1; }
+
+.ai-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--mono);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(184,115,51,0.1);
+  border-radius: 20px;
+}
+
+.ai-status-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulseAi 2s infinite;
+}
+
+@keyframes pulseAi {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
 .ai-card-title {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
-  font-size: 1.65rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 1.4rem;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
 }
+
 .ai-card-title i {
+  font-size: 2.8rem;
   color: var(--accent);
-  font-size: 1.4rem;
-  opacity: 0.8;
+  filter: drop-shadow(0 0 10px rgba(184,115,51,0.3));
 }
+
+.ai-card-title span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
 .ai-card-desc {
-  font-size: 1.45rem;
-  line-height: 1.6;
-  color: var(--ink-muted);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+}
+
+.ai-card-tag {
+  display: inline-block;
+  margin-top: 3rem;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(184,115,51,0.3);
+  padding-bottom: 0.2rem;
 }
 
 @media (max-width: 768px) {
-  #ai-explorations { padding: 8rem 0; }
-  .ai-grid { margin-top: 4rem; }
+  #ai-explorations { padding: 10rem 0; }
+  .ai-card { padding: 4rem 2.4rem; }
 }
