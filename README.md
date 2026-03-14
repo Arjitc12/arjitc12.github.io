@@ -51,4 +51,4 @@ To view the portfolio locally:
 - **Email:** [arjitc12@icloud.com](mailto:arjitc12@icloud.com)
 
 ---
-© 2025 Arjit Chauhan. Built with precision.
+© 2026 Arjit Chauhan. Built with precision.
